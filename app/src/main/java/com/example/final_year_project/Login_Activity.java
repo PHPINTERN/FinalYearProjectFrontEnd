@@ -1,5 +1,7 @@
 package com.example.final_year_project;
 
+import static java.lang.Character.getType;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -14,6 +16,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import android.util.Log;
 
 import org.json.JSONObject;
 
@@ -34,20 +37,20 @@ public class Login_Activity extends AppCompatActivity {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    String URL = "http://192.168.197.68/signin.php";
+                    String URL = "http://10.0.2.2/signin.php";
                     JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, URL, null, new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {
                             try {
                                 JSONObject jsonObject = response.getJSONObject("response");
                                 String Status = jsonObject.getString("status");
-                                Toast.makeText(Login_Activity.this,Status ,Toast.LENGTH_SHORT).show();
-                                if(Status == "1"){
+                                String stringWithoutSpaces = Status.replaceAll("\\s", "").trim();
+                                if(stringWithoutSpaces.equals("1")){
                                     Intent intent = new Intent(getApplicationContext(), Main_Activity.class);
                                     startActivity(intent);
                                 }
                                 else{
-//                                    Toast.makeText(Login_Activity.this,"User Not Found",Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(Login_Activity.this,"User Not Found",Toast.LENGTH_SHORT).show();
                                 }
 
                             }
