@@ -66,12 +66,12 @@
                 android:layout_marginRight="30dp" />
 
             <Button
-                android:id="@+id/LogIn"
+                android:id="@+id/login"
                 android:layout_width="165dp"
                 android:layout_height="39dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:onClick="login"
+
                 android:text="LOGIN" />
 
             <TextView
