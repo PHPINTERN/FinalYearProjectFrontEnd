@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,7 +31,7 @@ public class Login_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         Button button = (Button) findViewById(R.id.login);
-
+        String Student_Id = "2100520036";
 
 
         try{
@@ -39,7 +40,16 @@ public class Login_Activity extends AppCompatActivity {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    String URL = "http://10.0.2.2/signin.php";
+                    EditText Username = (EditText) findViewById(R.id.Username);
+                    String USERNAME = "";
+                    USERNAME = Username.getText().toString();
+
+
+                    EditText Password = (EditText) findViewById(R.id.Password);
+                    String PASSWORD = "";
+                    PASSWORD = Password.getText().toString();
+
+                    String URL = "http://10.0.2.2/signin.php?Username="+USERNAME+"&Password="+PASSWORD;
                     JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, URL, null, new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {
@@ -49,13 +59,16 @@ public class Login_Activity extends AppCompatActivity {
                                 String stringWithoutSpaces = Status.replaceAll("\\s", "").trim();
                                 if(stringWithoutSpaces.equals("1")){
                                     Intent intent = new Intent(getApplicationContext(), Main_Activity.class);
+                                    intent.putExtra("Student_Id","2100520036");
                                     startActivity(intent);
                                 }
-                                else{
+
+                                else if(stringWithoutSpaces.equals("0")) {
                                     TextView not_found = (TextView) findViewById(R.id.not_found);
                                     not_found.setVisibility(View.VISIBLE);
-                                    Toast.makeText(Login_Activity.this,"User Not Found",Toast.LENGTH_SHORT).show();
+
                                 }
+
 
                             }
                             catch (Exception e){
@@ -96,8 +109,5 @@ public class Login_Activity extends AppCompatActivity {
 
     }
 
-//    public void login(View view) {
-//        Intent intent = new Intent(getApplicationContext(), Main_Activity.class);
-//        startActivity(intent);
-//    }
+
 }

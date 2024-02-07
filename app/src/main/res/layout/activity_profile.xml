@@ -113,36 +113,41 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
 
         <ImageView
-            android:id="@+id/imageView15"
+            android:id="@+id/Student_Profile"
             android:layout_width="149dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:src="@drawable/main_profile_icon" />
+
+
+            />
 
         <TextView
+            android:id="@+id/Student_Name"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="37dp"
             android:layout_gravity="center"
-            android:text="Chandra Pravesh"
+            android:text=""
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="25dp" />
 
         <TextView
+            android:id="@+id/Student_Id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="2100520036"
+            android:text=""
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20dp" />
 
         <TextView
+            android:id="@+id/Branch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="BCA"
+            android:text=""
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="20dp"
@@ -156,6 +161,7 @@
             android:src="@color/black" />
 
         <TextView
+            android:id="@+id/Student_Address"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_gravity="center"
@@ -163,7 +169,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginBottom="10dp"
             android:gravity="center"
-            android:text="H.no 54-22-59, GollaVidhi, Hanuman Temple Road, Malkapuram, Viskhapatnam 530011"
+            android:text=""
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="15dp" />
@@ -199,10 +205,11 @@
                 android:src="@drawable/main_profile_icon" />
 
             <TextView
+                android:id="@+id/Student_Number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="+91 76718 90335"
+                android:text=""
                 android:textColor="@color/black"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -220,10 +227,11 @@
                 android:src="@drawable/main_profile_icon" />
 
             <TextView
+                android:id="@+id/Student_Email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="chandrapravesh.official@gmail.com"
+                android:text=""
                 android:textColor="@color/black"
                 android:textSize="15dp" />
         </LinearLayout>
