@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,21 +29,15 @@ public class Profile_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        Intent intent = getIntent();
-        String Student_Id = intent.getStringExtra("Student_Id");
+
         RequestQueue requestQueue = Volley.newRequestQueue(this);
 
         try{
-            String URL =  "http://10.0.2.2/profile.php";
+            Intent intent = getIntent();
+            String Student_Id1 = intent.getStringExtra("Student_Id");
+            String Student_Id_String  = Student_Id1.toString();
+            String URL =  "http://192.168.115.68/profile.php?Student_Id="+Student_Id_String;
             JSONObject params = new JSONObject();
-
-            try {
-                params.put("Student_Id", "2100520036");
-
-                // Add more parameters if needed
-            } catch (Exception e) {
-                Toast.makeText(Profile_Activity.this,e.toString(),Toast.LENGTH_LONG).show();
-            }
 
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, URL, params, new Response.Listener<JSONObject>() {
                 @Override
@@ -112,5 +107,10 @@ public class Profile_Activity extends AppCompatActivity {
 
 
 
+    }
+
+    public void viewmore(View view) {
+        Intent intent = new Intent(getApplicationContext(), More_Profile.class);
+        startActivity(intent);
     }
 }

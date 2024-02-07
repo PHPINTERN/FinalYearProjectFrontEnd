@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 public class Main_Activity extends AppCompatActivity {
@@ -12,6 +13,10 @@ public class Main_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+        Intent intent11 = getIntent();
+        String Student_Id = intent11.getStringExtra("Student_Id");
+
+
 
 
 //        Toast.makeText(this, Student_Id,Toast.LENGTH_SHORT).show();

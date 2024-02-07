@@ -177,6 +177,7 @@
             <TableRow android:gravity="center">
 
                 <LinearLayout
+                    android:id="@+id/profileLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
