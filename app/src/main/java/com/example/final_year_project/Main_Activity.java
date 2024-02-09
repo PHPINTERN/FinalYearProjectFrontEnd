@@ -38,4 +38,8 @@ public class Main_Activity extends AppCompatActivity {
         Profile.putExtra("Student_Id",Student_Id);
        startActivity(Profile);
     }
+    public void logout(View view) {
+        Intent intent = new Intent(getApplicationContext(), Login_Activity.class);
+        startActivity(intent);
+    }
 }

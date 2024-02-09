@@ -36,7 +36,7 @@ public class Profile_Activity extends AppCompatActivity {
             Intent intent = getIntent();
             String Student_Id1 = intent.getStringExtra("Student_Id");
             String Student_Id_String  = Student_Id1.toString();
-            String URL =  "http://192.168.115.68/profile.php?Student_Id="+Student_Id_String;
+            String URL =  "http://10.0.2.2/profile.php?Student_Id="+Student_Id_String;
             JSONObject params = new JSONObject();
 
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, URL, params, new Response.Listener<JSONObject>() {
@@ -111,6 +111,10 @@ public class Profile_Activity extends AppCompatActivity {
 
     public void viewmore(View view) {
         Intent intent = new Intent(getApplicationContext(), More_Profile.class);
+        startActivity(intent);
+    }
+    public void logout(View view) {
+        Intent intent = new Intent(getApplicationContext(), Login_Activity.class);
         startActivity(intent);
     }
 }

@@ -48,7 +48,7 @@ public class Login_Activity extends AppCompatActivity {
                     String PASSWORD = "";
                     PASSWORD = Password.getText().toString();
 
-                    String URL = "http://192.168.115.68/signin.php?Username="+USERNAME+"&Password="+PASSWORD;
+                    String URL = "http://10.0.2.2/signin.php?Username="+USERNAME+"&Password="+PASSWORD;
 //                    String URL = "http://10.0.2.2/signin.php";
                     JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, URL, null, new Response.Listener<JSONObject>() {
                         @Override

@@ -16,6 +16,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Acadamic_Calander_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Notes_Activity"
+            android:exported="false" />
+        <activity
             android:name=".More_Profile"
             android:exported="false" />
         <activity

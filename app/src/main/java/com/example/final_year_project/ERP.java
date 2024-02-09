@@ -2,6 +2,7 @@ package com.example.final_year_project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebResourceRequest;
@@ -42,5 +43,9 @@ public class ERP extends AppCompatActivity {
         w1 =findViewById(R.id.web);
         w1.reload();
 
+    }
+    public void logout(View view) {
+        Intent intent = new Intent(getApplicationContext(), Main_Activity.class);
+        startActivity(intent);
     }
 }
