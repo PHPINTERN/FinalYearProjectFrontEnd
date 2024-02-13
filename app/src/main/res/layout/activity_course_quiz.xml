@@ -187,7 +187,7 @@
                             android:background="@drawable/main_footer"
                             android:gravity="center"
                             android:text="Start"
-android:onClick="start"
+                        android:onClick="start"
                             android:textAlignment="center"
                             android:textAllCaps="true"
                             android:textColor="@color/white"
