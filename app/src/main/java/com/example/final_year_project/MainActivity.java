@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    String ip = "192.168.198.68";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         try {
             Intent intent = new Intent(getApplicationContext(), Login_Activity.class);
-
+            intent.putExtra("Server_ip", ip);
             startActivity(intent);
 
         }

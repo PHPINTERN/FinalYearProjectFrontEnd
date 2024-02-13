@@ -31,6 +31,8 @@ public class Login_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         Button button = (Button) findViewById(R.id.login);
+        Intent intent = getIntent();
+        String IP = intent.getStringExtra("Server_ip");
 
 
         try{
@@ -48,7 +50,7 @@ public class Login_Activity extends AppCompatActivity {
                     String PASSWORD = "";
                     PASSWORD = Password.getText().toString();
 
-                    String URL = "http://10.0.2.2/signin.php?Username="+USERNAME+"&Password="+PASSWORD;
+                    String URL = "http://"+IP+"/signin.php?Username="+USERNAME+"&Password="+PASSWORD;
 //                    String URL = "http://10.0.2.2/signin.php";
                     JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, URL, null, new Response.Listener<JSONObject>() {
                         @Override
@@ -62,6 +64,7 @@ public class Login_Activity extends AppCompatActivity {
                                     String Student_Id = jsonObject.getString("student_id");
                                     Intent intent = new Intent(getApplicationContext(), Main_Activity.class);
                                     intent.putExtra("Student_Id",Student_Id);
+                                    intent.putExtra("Server_Ip", IP);
                                     startActivity(intent);
                                 }
 

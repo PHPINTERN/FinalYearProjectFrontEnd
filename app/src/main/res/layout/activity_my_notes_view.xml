@@ -4,25 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Acadamic_Calander_Activity">
+    tools:context=".MyNotes_View_Activity">
 
     <ImageView
         android:id="@+id/imageView14"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:src="@drawable/erp_yellow_backgroung"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="0dp" />
 
     <LinearLayout
 
         android:id="@+id/linearLayout8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="vertical">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/linearLayout"
@@ -85,7 +81,7 @@
             android:layout_marginTop="-2dp"
             android:background="@drawable/main_page_cdoe"
             android:gravity="center"
-            android:text="Acadamic calander"
+            android:text="MY NOTES"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="@color/black"
@@ -98,10 +94,11 @@
 
     </LinearLayout>
 
+
     <LinearLayout
         android:id="@+id/linearLayout6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="350dp"
+        android:layout_height="553dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/icon_background"
         android:orientation="vertical"
@@ -109,116 +106,129 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-
-            android:background="@drawable/main_page_cdoe"
+        <EditText
             android:gravity="center"
-            android:text="New Added "
-            android:textAlignment="center"
-            android:textAllCaps="true"
-            android:textColor="@color/black"
-            android:textSize="15dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-            app:layout_constraintVertical_bias="0"
-            tools:layout_editor_absoluteX="0dp" />
-
-        <LinearLayout
+            android:layout_margin="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="30dp"
-            android:background="@drawable/border"
-            android:padding="10dp"
+            android:layout_gravity="center"
+            android:text="Software Development CO1 "
+            android:textColor="@color/black"
+            android:textSize="23dp"
+            android:textStyle="bold" />
+
+        <ScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="372dp"
+            android:layout_margin="10dp"
+            android:background="#EEEEEE"
+            android:layout_gravity="center"
             >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/editTextTextMultiLine2"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:background="@drawable/main_footer"
+                android:gravity="center"
+                android:onClick="erp"
+                android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-
-                    android:layout_marginRight="30dp"
-                    android:text="Branch:"
-                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="SAVE"
+                    android:textColor="@color/white"
                     android:textSize="15dp"
-                    android:textStyle="bold"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
-                    />
-
-                <Spinner
-                    android:id="@+id/Acdamic_Calander_Branch"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginRight="30dp"
-                    android:textStyle="bold"
-                    />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:text="Year:"
-                android:textColor="@color/black"
-                android:textSize="15dp"
-                android:textStyle="bold"
-
-                />
-
-
-            <Spinner
-                android:id="@+id/Acdamic_Calander_Year"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:textStyle="bold"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-
-                android:layout_marginRight="30dp"
-                android:text="Semester:"
-                android:textColor="@color/black"
-                android:textSize="15dp"
-                android:textStyle="bold"
-
-                />
-
-            <Spinner
-                android:id="@+id/Acdamic_Calander_Semester"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:textStyle="bold"
-                />
-            <TextView
-                android:layout_width="250dp"
-
-                android:layout_height="49dp"
+            <ImageView
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:layout_margin="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
                 android:background="@drawable/main_footer"
                 android:gravity="center"
-                android:onClick="viewmore"
-                android:text="VIEW MORE"
+                android:onClick="lms"
+                android:orientation="vertical">
 
-                android:textAlignment="center"
-                android:textAllCaps="true"
-                android:textColor="@color/white"
-                android:textSize="18dp"
-                android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="DELETE"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <ImageView
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/black" />
 
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:background="@drawable/main_footer"
+                android:gravity="center"
+                android:onClick="lms"
+                android:orientation="vertical">
 
-
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="SHARE"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
 
+    </LinearLayout>
 
 
 
@@ -228,7 +238,7 @@
         android:layout_height="18dp"
         android:background="@drawable/main_footer"
         android:gravity="center_horizontal"
-        android:text="© Copyright 2019 by Study Square."
+        android:text="© Copyright 2019 by K L Deemed to be University."
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="13dp"
@@ -236,8 +246,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
 
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

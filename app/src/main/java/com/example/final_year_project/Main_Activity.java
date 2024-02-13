@@ -13,8 +13,8 @@ public class Main_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        Intent intent11 = getIntent();
-        String Student_Id = intent11.getStringExtra("Student_Id");
+
+
 
 
 
@@ -27,6 +27,7 @@ public class Main_Activity extends AppCompatActivity {
 
         Intent announcement = new Intent(getApplicationContext(), Announcement_Activity.class);
 //        announcement.putExtra("Student_Id",Student_Id);
+
         startActivity(announcement);
     }
 
@@ -34,12 +35,24 @@ public class Main_Activity extends AppCompatActivity {
     public void Profile(View view) {
         Intent intent11 = getIntent();
         String Student_Id = intent11.getStringExtra("Student_Id");
+        String IP = intent11.getStringExtra("Server_Ip");
        Intent Profile = new Intent(getApplicationContext(), Profile_Activity.class);
         Profile.putExtra("Student_Id",Student_Id);
+        Profile.putExtra("Server_Ip", IP);
        startActivity(Profile);
     }
     public void logout(View view) {
         Intent intent = new Intent(getApplicationContext(), Login_Activity.class);
+        startActivity(intent);
+    }
+
+    public void notes(View view) {
+        Intent intent = new Intent(getApplicationContext(),Notes_Activity.class);
+        startActivity(intent);
+    }
+
+    public void Quiz_Activity(View view) {
+        Intent intent = new Intent(getApplicationContext(), Quiz_Activity.class);
         startActivity(intent);
     }
 }

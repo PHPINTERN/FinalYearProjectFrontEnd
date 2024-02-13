@@ -304,10 +304,10 @@
             <LinearLayout
                 android:layout_width="180dp"
                 android:layout_height="150dp"
-                android:onClick="notcompleted"
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:onClick="mynotes"
                     android:layout_width="match_parent"
                     android:layout_height="141dp"
                     android:layout_margin="3dp"
@@ -360,6 +360,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:onClick="Class_Notes"
                     android:layout_width="match_parent"
                     android:layout_height="141dp"
                     android:layout_margin="3dp"

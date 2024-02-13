@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Acadamic_Calander_Activity">
+    tools:context=".Quiz_Warning_Page">
 
     <ImageView
         android:id="@+id/imageView14"
@@ -21,6 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -85,7 +86,7 @@
             android:layout_marginTop="-2dp"
             android:background="@drawable/main_page_cdoe"
             android:gravity="center"
-            android:text="Acadamic calander"
+            android:text="21CA3434 CO1"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textColor="@color/black"
@@ -96,131 +97,81 @@
             app:layout_constraintVertical_bias="0"
             tools:layout_editor_absoluteX="0dp" />
 
-    </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/icon_background"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-
-            android:background="@drawable/main_page_cdoe"
-            android:gravity="center"
-            android:text="New Added "
-            android:textAlignment="center"
-            android:textAllCaps="true"
-            android:textColor="@color/black"
-            android:textSize="15dp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-            app:layout_constraintVertical_bias="0"
-            tools:layout_editor_absoluteX="0dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_margin="30dp"
-            android:background="@drawable/border"
-            android:padding="10dp"
-            >
+            android:background="@drawable/main_footer"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center_horizontal"
+                android:text="QUIZ IMPORTANT instruction"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textAllCaps="true"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
 
-                    android:layout_marginRight="30dp"
-                    android:text="Branch:"
-                    android:textColor="@color/black"
-                    android:textSize="15dp"
-                    android:textStyle="bold"
+                    android:text="Dear Student,"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
 
-                    />
-
-                <Spinner
-                    android:id="@+id/Acdamic_Calander_Branch"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="During the quiz, please don't go back, return to the homepage, or open new tabs. If you do, the quiz will be submitted. For further guidance, contact the Course Coordinator."
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+                <TextView
+                    android:id="@+id/subbmit_Button"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginRight="30dp"
-                    android:textStyle="bold"
-                    />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:text="Year:"
-                android:textColor="@color/black"
-                android:textSize="15dp"
-                android:textStyle="bold"
-
-                />
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="25dp"
+                    android:background="@drawable/main_page_cdoe"
+                    android:gravity="center_horizontal"
+                    android:onClick="Quiz_Submit"
+                    android:text="START THE QUIZ"
+                    android:layout_marginBottom="10dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
 
 
-            <Spinner
-                android:id="@+id/Acdamic_Calander_Year"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:textStyle="bold"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
 
-                android:layout_marginRight="30dp"
-                android:text="Semester:"
-                android:textColor="@color/black"
-                android:textSize="15dp"
-                android:textStyle="bold"
 
-                />
 
-            <Spinner
-                android:id="@+id/Acdamic_Calander_Semester"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:textStyle="bold"
-                />
-            <TextView
-                android:layout_width="250dp"
 
-                android:layout_height="49dp"
-                android:layout_gravity="center"
-                android:layout_margin="10dp"
-                android:background="@drawable/main_footer"
-                android:gravity="center"
-                android:onClick="viewmore"
-                android:text="VIEW MORE"
+            </LinearLayout>
 
-                android:textAlignment="center"
-                android:textAllCaps="true"
-                android:textColor="@color/white"
-                android:textSize="18dp"
-                android:textStyle="bold" />
 
 
 
         </LinearLayout>
+
+
     </LinearLayout>
-
-
-
 
     <TextView
         android:id="@+id/textView4"
@@ -228,7 +179,7 @@
         android:layout_height="18dp"
         android:background="@drawable/main_footer"
         android:gravity="center_horizontal"
-        android:text="© Copyright 2019 by Study Square."
+        android:text="© Copyright 2019 by K L Deemed to be University."
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="13dp"
@@ -236,8 +187,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
         app:layout_constraintVertical_bias="1.0" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
