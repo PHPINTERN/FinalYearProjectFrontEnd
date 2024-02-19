@@ -166,6 +166,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
                 android:gravity="center"
+                android:onClick="forgotten_password"
                 android:text="Forgotten Passowrd ?"
                 android:textColor="#004092"
                 android:textSize="15dp"

@@ -16,6 +16,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".ForgettenPassword_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Acadamic_Calander_Course"
+            android:exported="false" />
+        <activity
             android:name=".Quiz_Warning_Page"
             android:exported="false" />
         <activity

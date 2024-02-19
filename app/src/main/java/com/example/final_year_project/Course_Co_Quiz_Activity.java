@@ -15,11 +15,6 @@ public class Course_Co_Quiz_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_course_co_quiz);
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        Toast.makeText(this,"Quiz Submitted",Toast.LENGTH_SHORT).show();
-    }
 
     @Override
     public void onRestart() {

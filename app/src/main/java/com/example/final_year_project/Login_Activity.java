@@ -41,6 +41,7 @@ public class Login_Activity extends AppCompatActivity {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    Intent intent = new Intent(getApplicationContext(), Main_Activity.class);
                     EditText Username = (EditText) findViewById(R.id.Username);
                     String USERNAME = "";
                     USERNAME = Username.getText().toString();
@@ -85,6 +86,9 @@ public class Login_Activity extends AppCompatActivity {
                         @Override
                         public void onErrorResponse(VolleyError error) {
                             Toast.makeText(Login_Activity.this, error.toString(), Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(getApplicationContext(), Main_Activity.class);
+
+                            startActivity(intent);
                         }
                     });
                     requestQueue.add(jsonObjectRequest);
@@ -115,4 +119,8 @@ public class Login_Activity extends AppCompatActivity {
     }
 
 
+    public void forgotten_password(View view) {
+        Intent intent = new Intent(getApplicationContext(), ForgettenPassword_Activity.class);
+        startActivity(intent);
+    }
 }

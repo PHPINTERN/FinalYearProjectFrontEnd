@@ -217,13 +217,14 @@
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:onClick="notcompleted"
                     android:layout_width="match_parent"
                     android:layout_height="141dp"
                     android:layout_margin="3dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/icon_background"
                     android:orientation="vertical"
-                    android:onClick="Acadmic">
+                    >
 
                     <ImageView
                         android:layout_width="90dp"
@@ -321,7 +322,8 @@
                     android:layout_height="141dp"
                     android:layout_margin="3dp"
                     android:background="@drawable/icon_background"
-                    android:onClick="notcompleted"
+
+                    android:onClick="Acadmic"
                     android:orientation="vertical">
 
                     <ImageView
