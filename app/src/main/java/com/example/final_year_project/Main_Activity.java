@@ -55,4 +55,9 @@ public class Main_Activity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), Quiz_Activity.class);
         startActivity(intent);
     }
+
+    public void Help_Desk(View view) {
+        Intent intent =  new Intent(getApplicationContext(),HelpDesk_Activity.class);
+        startActivity(intent);
+    }
 }

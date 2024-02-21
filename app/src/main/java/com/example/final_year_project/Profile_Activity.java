@@ -117,4 +117,9 @@ public class Profile_Activity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), Login_Activity.class);
         startActivity(intent);
     }
+
+    public void faculity_list(View view) {
+        Intent intent = new Intent(getApplicationContext(), Faculty_List_Activity.class);
+        startActivity(intent);
+    }
 }

@@ -23,4 +23,9 @@ public class Notes_Activity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), MyNotes_Activity.class);
         startActivity(intent);
     }
+
+    public void sharednotes(View view) {
+        Intent intent =  new Intent(getApplicationContext(),Shared_Notes_Activity.class);
+        startActivity(intent);
+    }
 }

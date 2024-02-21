@@ -16,6 +16,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".HelpDesk_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Faculty_List_Activity"
+            android:exported="false" />
+        <activity
             android:name=".ForgettenPassword_Activity"
             android:exported="false" />
         <activity

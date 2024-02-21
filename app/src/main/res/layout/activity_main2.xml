@@ -256,7 +256,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:onClick="notcompleted"
+                    android:onClick="Help_Desk"
                     android:orientation="vertical">
 
                     <ImageView
@@ -300,29 +300,6 @@
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:onClick="Developer"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="105dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/main_developer_icon" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="Developer"
-                        android:textAlignment="center"
-                        android:textColor="#934046"
-                        android:textStyle="bold" />
-
-
-                </LinearLayout>
             </TableRow>
         </TableLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

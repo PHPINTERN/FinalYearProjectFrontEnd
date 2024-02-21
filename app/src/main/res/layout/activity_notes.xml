@@ -464,7 +464,7 @@
                     android:layout_height="141dp"
                     android:layout_margin="3dp"
                     android:background="@drawable/icon_background"
-                    android:onClick="notcompleted"
+                    android:onClick="sharednotes"
                     android:orientation="vertical">
 
                     <ImageView
