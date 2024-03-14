@@ -60,4 +60,9 @@ public class Main_Activity extends AppCompatActivity {
         Intent intent =  new Intent(getApplicationContext(),HelpDesk_Activity.class);
         startActivity(intent);
     }
+
+    public void anyqueries(View view) {
+        Intent intent = new Intent(getApplicationContext(),Search_Topic_Activity.class);
+        startActivity(intent);
+    }
 }
